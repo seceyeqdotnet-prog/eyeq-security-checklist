@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Small Business Cybersecurity Checklist: 24 Steps to Stay Secure</title>
+<meta name="description" content="A practical cybersecurity checklist for small businesses — 24 clear steps across accounts, devices, email, your website, people, and testing. Tick them off and see your security readiness score.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://your-username.github.io/security-checklist/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Small Business Cybersecurity Checklist: 24 Steps to Stay Secure">
+<meta property="og:description" content="24 practical steps to protect your small business, with a live readiness score.">
+<meta property="og:url" content="https://your-username.github.io/security-checklist/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Public+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Small Business Cybersecurity Checklist: 24 Steps to Stay Secure",
+      "description": "A practical cybersecurity checklist for small businesses across accounts, devices, email, website, people, and testing.",
+      "author": { "@type": "Organization", "name": "Security Checklist" },
+      "publisher": { "@type": "Organization", "name": "Security Checklist" },
+      "mainEntityOfPage": "https://your-username.github.io/security-checklist/",
+      "datePublished": "2026-07-03",
+      "dateModified": "2026-07-03"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why do small businesses need cybersecurity?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Small businesses are frequent targets because they often hold valuable data but have fewer defences than large enterprises. Basic controls like multi-factor authentication, patching, backups, and staff training prevent the majority of common attacks." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the most important cybersecurity steps for a small business?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Enable multi-factor authentication, keep software patched, back up data regularly and test restores, train staff to spot phishing, use HTTPS on your website, apply least-privilege access, and periodically test your systems with a vulnerability scan or penetration test." }
+        },
+        {
+          "@type": "Question",
+          "name": "When should a small business get a penetration test?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Once the basics are in place, a penetration test is worthwhile before launching a new website or app, after major infrastructure changes, to meet a compliance or client requirement, or periodically to validate that defences actually hold." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#FBFAF7;
+    --panel:#FFFFFF;
+    --ink:#191C1A;
+    --slate:#5C635E;
+    --line:#E6E4DD;
+    --accent:#047857;        /* emerald */
+    --accent-ink:#03634A;
+    --accent-wash:#E7F3EE;
+    --accent-2:#B45309;      /* warm amber for warnings/attention */
+
+    --display:'Bricolage Grotesque',system-ui,sans-serif;
+    --body:'Public Sans',system-ui,sans-serif;
+    --mono:'Space Mono',ui-monospace,monospace;
+
+    --maxw:960px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
+
+  a{color:var(--accent-ink);text-decoration:none;}
+  a:hover{text-decoration:underline;text-underline-offset:3px;}
+  a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .eyebrow{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+  p{max-width:64ch;}
+
+  header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:20;}
+  .site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:16px;color:var(--ink);}
+  .brand:hover{text-decoration:none;}
+  .brand .mark{width:26px;height:26px;background:var(--accent);border-radius:8px;display:grid;place-items:center;flex:none;}
+  .brand .mark::after{content:"";width:9px;height:5px;border:solid #fff;border-width:0 0 2.5px 2.5px;transform:rotate(-45deg);margin-top:-2px;}
+  nav.site-nav{display:flex;gap:22px;font-size:14px;font-weight:500;}
+  nav.site-nav a{color:var(--slate);}
+  nav.site-nav a:hover{color:var(--ink);text-decoration:none;}
+  @media(max-width:680px){nav.site-nav{display:none;}}
+
+  .hero{padding:74px 0 40px;}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(32px,5.6vw,54px);line-height:1.06;letter-spacing:-.02em;margin:0 0 20px;max-width:17ch;}
+  .hero .lede{font-size:clamp(18px,2.3vw,21px);color:var(--slate);max-width:60ch;margin:0 0 28px;}
+  .btn{font-family:var(--body);font-weight:600;font-size:15px;padding:13px 22px;border-radius:8px;display:inline-block;border:1px solid transparent;transition:.15s;cursor:pointer;}
+  .btn-primary{background:var(--accent);color:#fff;}
+  .btn-primary:hover{background:var(--accent-ink);text-decoration:none;}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--ink);text-decoration:none;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+
+  section{padding:52px 0;}
+  .divide{border-top:1px solid var(--line);}
+  h2{font-family:var(--display);font-weight:700;font-size:clamp(24px,3.2vw,32px);line-height:1.15;letter-spacing:-.02em;margin:0 0 14px;max-width:24ch;}
+  .section-lede{color:var(--slate);font-size:18px;max-width:62ch;}
+
+  /* score bar (signature) */
+  .scorecard{position:sticky;top:64px;z-index:15;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 22px;box-shadow:0 2px 10px rgba(25,28,26,.05);margin:0 0 30px;}
+  .scorecard .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;gap:12px;}
+  .scorecard .label{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);}
+  .scorecard .count{font-family:var(--display);font-weight:700;font-size:22px;}
+  .scorecard .count b{color:var(--accent);}
+  .track{height:10px;background:var(--line);border-radius:6px;overflow:hidden;}
+  .track > i{display:block;height:100%;width:0;background:var(--accent);border-radius:6px;transition:width .3s ease;}
+  .scorecard .verdict{font-size:13px;color:var(--slate);margin-top:9px;font-weight:500;}
+
+  /* checklist groups */
+  .group{margin-bottom:30px;}
+  .group h3{font-family:var(--display);font-weight:700;font-size:19px;margin:0 0 4px;display:flex;align-items:center;gap:10px;letter-spacing:-.01em;}
+  .group h3 .g-num{font-family:var(--mono);font-size:13px;color:var(--accent);background:var(--accent-wash);border-radius:6px;padding:3px 9px;font-weight:700;}
+  .group > p.g-desc{color:var(--slate);font-size:15px;margin:0 0 14px;}
+  ul.items{list-style:none;margin:0;padding:0;display:grid;gap:10px;}
+  li.item{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:0;transition:border-color .15s,background .15s;}
+  li.item:hover{border-color:#CFCEC5;}
+  li.item label{display:flex;gap:14px;align-items:flex-start;padding:15px 18px;cursor:pointer;}
+  li.item input{appearance:none;-webkit-appearance:none;width:22px;height:22px;border:2px solid var(--slate);border-radius:6px;flex:none;margin-top:1px;cursor:pointer;position:relative;transition:.12s;}
+  li.item input:hover{border-color:var(--accent);}
+  li.item input:checked{background:var(--accent);border-color:var(--accent);}
+  li.item input:checked::after{content:"";position:absolute;left:6px;top:2px;width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg);}
+  li.item .txt{font-size:15.5px;line-height:1.5;}
+  li.item .txt b{font-weight:600;}
+  li.item .txt small{display:block;color:var(--slate);font-size:13.5px;margin-top:2px;}
+  li.item input:checked ~ .txt{color:var(--slate);}
+  li.item input:checked ~ .txt b{text-decoration:line-through;text-decoration-color:var(--accent);}
+
+  /* callout / bridge */
+  .callout{background:var(--accent-wash);border:1px solid #C9E4D8;border-radius:12px;padding:26px 28px;margin-top:8px;}
+  .callout h3{font-family:var(--display);font-weight:700;margin:0 0 8px;font-size:20px;}
+  .callout p{margin:0;color:#28453A;}
+
+  /* final cta */
+  .final{background:var(--ink);color:#fff;border-radius:16px;padding:44px;margin-top:8px;}
+  .final .eyebrow{color:#7FD3B4;}
+  .final h2{color:#fff;}
+  .final p{color:#C3C9C4;}
+  .final .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px;}
+  .final .btn-primary{background:var(--accent);}
+  .final .btn-primary:hover{background:#0A9E76;}
+  .final .text{color:#7FD3B4;font-size:14px;}
+
+  footer.site{padding:38px 0 50px;border-top:1px solid var(--line);margin-top:52px;}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;}
+  footer .fcol h4{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin:0 0 12px;font-weight:700;}
+  footer .fcol a{display:block;color:var(--slate);font-size:14px;margin-bottom:8px;}
+  footer .fcol a:hover{color:var(--ink);}
+  .copyright{font-size:13px;color:var(--slate);margin-top:28px;border-top:1px solid var(--line);padding-top:18px;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark"></span> Security Checklist</a>
+    <nav class="site-nav">
+      <a href="#why">Why it matters</a>
+      <a href="#checklist">The checklist</a>
+      <a href="#testing">Testing</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <p class="eyebrow">For small businesses</p>
+    <h1>The cybersecurity checklist small businesses actually use.</h1>
+    <p class="lede">Twenty-four practical steps to protect your business — no jargon, no fear-mongering. Work through them, tick each one off, and watch your readiness score climb.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#checklist">Start the checklist</a>
+      <a class="btn btn-ghost" href="#why">Why it matters</a>
+    </div>
+  </div>
+</div>
+
+<!-- WHY -->
+<section id="why" class="divide">
+  <div class="wrap">
+    <p class="eyebrow">The reality</p>
+    <h2>Small businesses are targets — not too small to bother with.</h2>
+    <p>It's a common myth that attackers only chase big companies. In practice, small businesses are attractive precisely because they hold valuable data — customer records, payment details, logins — while often running with fewer defences than a large enterprise. Most attacks aren't sophisticated, targeted operations either; they're automated and opportunistic, sweeping the internet for easy openings.</p>
+    <p>The good news: the same basics stop the vast majority of them. You don't need an enterprise budget — you need to close the obvious gaps consistently. That's what this checklist is for. Get through the essentials first, then use a professional <a href="https://www.eyeqdotnet.com/penetration-testing">penetration testing service</a> to confirm nothing important slipped through.</p>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section id="checklist" class="divide">
+  <div class="wrap">
+    <p class="eyebrow">The checklist</p>
+    <h2>24 steps to a more secure business</h2>
+    <p class="section-lede" style="margin-bottom:26px;">Tick each item as you complete it. Your progress updates live — nothing is saved or sent anywhere.</p>
+
+    <!-- SIGNATURE: live readiness score -->
+    <div class="scorecard" role="status" aria-live="polite">
+      <div class="row">
+        <span class="label">Security readiness</span>
+        <span class="count"><b id="done">0</b> / <span id="total">24</span></span>
+      </div>
+      <div class="track"><i id="fill"></i></div>
+      <div class="verdict" id="verdict">Tick items as you secure them.</div>
+    </div>
+
+    <!-- 1 -->
+    <div class="group">
+      <h3><span class="g-num">01</span> Accounts &amp; passwords</h3>
+      <p class="g-desc">Weak and reused credentials are the number-one way in. Fix this first.</p>
+      <ul class="items">
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Turn on multi-factor authentication (MFA)</b><small>Especially for email, banking, and admin accounts — it blocks most account takeovers.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Use a password manager</b><small>So every account gets a long, unique password no one has to remember.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Remove old or unused accounts</b><small>Former staff, old vendors, and shared logins are quiet liabilities.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Give each person their own login</b><small>No shared accounts — you need to know who did what.</small></span></label></li>
+      </ul>
+    </div>
+
+    <!-- 2 -->
+    <div class="group">
+      <h3><span class="g-num">02</span> Devices &amp; software</h3>
+      <p class="g-desc">Unpatched software and unprotected devices are easy pickings.</p>
+      <ul class="items">
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Keep everything updated</b><small>Enable automatic updates for operating systems, apps, and plugins.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Run reputable endpoint protection</b><small>Antivirus / anti-malware on every computer and server.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Encrypt laptops and phones</b><small>So a lost or stolen device doesn't mean lost data.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Set devices to auto-lock</b><small>Short screen-lock timeouts on all work devices.</small></span></label></li>
+      </ul>
+    </div>
+
+    <!-- 3 -->
+    <div class="group">
+      <h3><span class="g-num">03</span> Email &amp; phishing</h3>
+      <p class="g-desc">Most breaches start with a convincing email. People are your front line.</p>
+      <ul class="items">
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Enable spam and phishing filtering</b><small>Most email providers offer strong filters — make sure they're on.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Train staff to spot phishing</b><small>Short, regular reminders beat one long annual session.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Verify payment or bank-detail changes</b><small>Always confirm by phone using a known number — a classic scam target.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Set up SPF, DKIM and DMARC</b><small>Email authentication that stops others spoofing your domain.</small></span></label></li>
+      </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="group">
+      <h3><span class="g-num">04</span> Website &amp; data</h3>
+      <p class="g-desc">Your website and the data behind it need their own protection.</p>
+      <ul class="items">
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Serve your site over HTTPS</b><small>A valid TLS certificate on every page — no exceptions.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Back up data — and test restores</b><small>An untested backup isn't a backup. Keep an offline copy.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Limit who can access what</b><small>Least privilege: people get only the access their role needs.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Keep your CMS and plugins current</b><small>Outdated components (like old plugins) are a top attack route.</small></span></label></li>
+      </ul>
+    </div>
+
+    <!-- 5 -->
+    <div class="group">
+      <h3><span class="g-num">05</span> People &amp; process</h3>
+      <p class="g-desc">Good habits and a plan matter as much as tools.</p>
+      <ul class="items">
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Have a simple incident plan</b><small>Who to call and what to do if something goes wrong — written down.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Offboard staff promptly</b><small>Revoke access the day someone leaves.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Review third-party access</b><small>Know which vendors and apps can reach your systems and data.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Separate admin from everyday accounts</b><small>Don't browse email and admin your servers from the same login.</small></span></label></li>
+      </ul>
+    </div>
+
+    <!-- 6 -->
+    <div class="group">
+      <h3><span class="g-num">06</span> Testing &amp; assurance</h3>
+      <p class="g-desc">Once the basics are in place, prove they actually work.</p>
+      <ul class="items">
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Run regular vulnerability scans</b><small>Automated checks that flag known weaknesses as they appear.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Get a penetration test</b><small>A specialist actively tests your defences and proves what's exploitable.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Fix findings and retest</b><small>Close the gaps, then confirm each fix genuinely holds.</small></span></label></li>
+        <li class="item"><label><input type="checkbox"><span class="txt"><b>Review your security at least yearly</b><small>Your systems change — your checks should keep pace.</small></span></label></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTING BRIDGE -->
+<section id="testing" class="divide">
+  <div class="wrap">
+    <p class="eyebrow">Beyond the basics</p>
+    <h2>Ticked the boxes? Now find out if it holds up.</h2>
+    <p>Checklists close the obvious gaps, but they can't tell you whether a determined attacker could still get in. That takes hands-on testing — someone probing your website and systems the way a real attacker would, then reporting exactly what they found and how to fix it.</p>
+    <div class="callout">
+      <h3>When it's worth getting a professional test</h3>
+      <p>Before launching a new website or app, after big infrastructure changes, when a client or regulation requires it, or simply to get an honest picture of your exposure. A scoped <a href="https://www.eyeqdotnet.com/penetration-testing">penetration test</a> turns "we think we're secure" into "we've checked, and here's the proof."</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="divide">
+  <div class="wrap">
+    <div class="final">
+      <p class="eyebrow">Get an expert opinion</p>
+      <h2>Test your defences with EYEQDOTNET</h2>
+      <p>EYEQDOTNET provides penetration testing and security assessments for businesses — with plain-English, prioritised reporting and support fixing what's found. A practical next step once your checklist is complete.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.eyeqdotnet.com/penetration-testing">See penetration testing services</a>
+        <a class="text" href="https://www.eyeqdotnet.com/penetration-testing">eyeqdotnet.com/penetration-testing →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="fcol" style="max-width:280px;">
+      <a class="brand" href="/" style="margin-bottom:12px;"><span class="mark"></span> Security Checklist</a>
+      <p style="font-size:14px;color:var(--slate);max-width:none;">Practical, jargon-free cybersecurity guidance for small businesses.</p>
+    </div>
+    <div class="fcol">
+      <h4>On this page</h4>
+      <a href="#why">Why it matters</a>
+      <a href="#checklist">The 24-step checklist</a>
+      <a href="#testing">Testing your defences</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="copyright">© 2026 Security Checklist. General guidance only — adapt these steps to your own business and obligations.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var boxes = Array.prototype.slice.call(document.querySelectorAll('li.item input[type=checkbox]'));
+    var doneEl = document.getElementById('done');
+    var totalEl = document.getElementById('total');
+    var fill = document.getElementById('fill');
+    var verdict = document.getElementById('verdict');
+    totalEl.textContent = boxes.length;
+
+    function update(){
+      var done = boxes.filter(function(b){return b.checked;}).length;
+      var pct = Math.round((done / boxes.length) * 100);
+      doneEl.textContent = done;
+      fill.style.width = pct + '%';
+      var msg;
+      if(done === 0) msg = 'Tick items as you secure them.';
+      else if(pct < 34) msg = 'Getting started — keep going.';
+      else if(pct < 67) msg = 'Good progress. The basics are taking shape.';
+      else if(pct < 100) msg = 'Strong. A few gaps left to close.';
+      else msg = 'Excellent — now validate it with a security test.';
+      verdict.textContent = pct + '% complete · ' + msg;
+    }
+    boxes.forEach(function(b){ b.addEventListener('change', update); });
+    update();
+  })();
+</script>
+
+</body>
+</html>
